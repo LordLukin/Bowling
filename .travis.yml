@@ -1,0 +1,43 @@
+language: cpp
+dist: trusty
+sudo: false
+os: linux
+
+matrix:
+  include:
+    - env: COMPILER=g++-6 BUILD=Debug STANDARD=14
+      compiler: gcc
+      addons:
+        apt:
+          update: true
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-6
+            - env: COMPILER=g++-6 BUILD=Release STANDARD=14
+      compiler: gcc
+      addons:
+        apt:
+          update: true
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-6
+            - lcov
+install:
+    - sudo pip install codecov
+
+script:
+    - mkdir build
+    - cd build
+    - cmake ..
+    - make
+    - ./Bowling
+    - ./Bowling-ut
+after_success:
+    - cd ${TRAVIS_BUILD_DIR}
+    - lcov --directory . --capture --output-file coverage.info # capture coverage info
+    - lcov --remove coverage.info '/usr/*' --output-file coverage.info # filter out system
+    - lcov --list coverage.info #debug info
+    # Uploading report to CodeCov
+    - bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
