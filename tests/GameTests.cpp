@@ -5,8 +5,9 @@ struct GameTests: public ::testing::Test
 {
 };
 
-TEST_F(GameTests, TestNothing)
+TEST_F(GameTests, AddFrames)
 {
     Game game;
+    game.addFrames("Someone:32|4");
 }
 

@@ -1,8 +1,10 @@
 #pragma once
+#include <string>
 
 class Game
 {
-    // Frame frame_[12]; TODO: Define frame
+    // TODO: Add game status: No game, In progress, Finished
 public:
     Game();
+    void addFrames(const std::string & frames);
 };
