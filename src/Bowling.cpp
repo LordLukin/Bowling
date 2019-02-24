@@ -6,3 +6,4 @@ int Bowling::getNumberOfLanes()
 {
     return 0;
 }
+

@@ -1,4 +1,3 @@
-#pragma once
 #include <string>
 
 class Game
@@ -7,4 +6,7 @@ class Game
 public:
     Game();
     void addFrames(const std::string & frames);
+    int conversion_to_int(std::string input);
+
+
 };
