@@ -11,3 +11,8 @@ TEST_F(GameTests, AddFrames)
     game.addFrames("Someone:32|4");
 }
 
+TEST_F(GameTests, Read)
+{
+    Game game;
+    game.read("text");
+}
