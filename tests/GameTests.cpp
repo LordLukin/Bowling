@@ -11,3 +11,9 @@ TEST_F(GameTests, AddFrames)
     game.addFrames("Someone:32|4");
 }
 
+TEST_F(GameTests, Read)
+{
+    Game game;
+    game.read("Michael:9-|9-|9-|9-|9-|9-|9-|9-|9-|9-||");
+    ASSERT_EQ(game.getName(),"Michael");
+}

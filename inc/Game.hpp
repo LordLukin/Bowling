@@ -3,8 +3,10 @@
 
 class Game
 {
-    // TODO: Add game status: No game, In progress, Finished
+    std::string name;
 public:
     Game();
+    std::string getName();
     void addFrames(const std::string & frames);
+    void read(const std::string& playerAndGame);
 };
