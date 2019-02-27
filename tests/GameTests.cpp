@@ -13,16 +13,14 @@ TEST_F(GameTests, AddFrames)
     game.addFrames("Someone:32|4");
 }
 
-
-TEST_F(GameTests, convertFrameToPoints)
+TEST_F(GameTests, ConvertingSingleCharToPoints_ProperCases)
 {
     ASSERT_EQ(game.convertSingleCharToPoints('X'), 10);
     ASSERT_EQ(game.convertSingleCharToPoints('-'), 0);
     ASSERT_EQ(game.convertSingleCharToPoints('4'), 4);
 }
 
-TEST_F(GameTests, ConvertingWrongFrameCausesException)
+TEST_F(GameTests, ConvertingSingleCharToPoints_BadCases)
 {
     ASSERT_ANY_THROW(game.convertSingleCharToPoints('a'));
 }
-
