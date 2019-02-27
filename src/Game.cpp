@@ -1,5 +1,6 @@
 #include "Game.hpp"
 #include<stdexcept>
+
 Game::Game() {}
 
 void Game::addFrames(std::string const & frames) {}
