@@ -10,7 +10,7 @@ int Game::convertSingleCharToPoints(char input)
         return 0;
     if (input == 'X')
         return 10;
-    if (input >= '1' and input <='9')
+    if (input >= '1' and input <= '9')
         return input -'0';
 
     throw std::logic_error("Invalid frame");
