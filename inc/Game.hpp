@@ -7,5 +7,5 @@ class Game
 public:
     Game();
     void addFrames(const std::string & frames);
-    int convertFrameToPoints(std::string input);
+    int convertSingleCharToPoints(char input);
 };

@@ -16,16 +16,12 @@ TEST_F(GameTests, AddFrames)
 
 TEST_F(GameTests, convertFrameToPoints)
 {
-    auto result = game.convertFrameToPoints("X");
-    ASSERT_EQ(game.convertFrameToPoints("X"), 10);
-    ASSERT_EQ(game.convertFrameToPoints("-"), 0);
-    ASSERT_EQ(game.convertFrameToPoints("4"), 4);
+    ASSERT_EQ(game.convertSingleCharToPoints('X'), 10);
+    ASSERT_EQ(game.convertSingleCharToPoints('-'), 0);
+    ASSERT_EQ(game.convertSingleCharToPoints('4'), 4);
 }
 
 TEST_F(GameTests, ConvertingWrongFrameCausesException)
 {
-    ASSERT_ANY_THROW(game.convertFrameToPoints("a"));
-    ASSERT_ANY_THROW(game.convertFrameToPoints("10"));
-    ASSERT_ANY_THROW(game.convertFrameToPoints("-3"));
+    ASSERT_ANY_THROW(game.convertSingleCharToPoints('a'));
 }
-
