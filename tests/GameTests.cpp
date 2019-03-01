@@ -1,18 +1,15 @@
 #include <gtest/gtest.h>
 #include "Game.hpp"
 #include <string>
-
 struct GameTests: public ::testing::Test
 {
     Game game;
 };
-
 TEST_F(GameTests, AddFrames)
 {
     Game game;
     game.addFrames("Someone:32|4");
 }
-
 TEST_F(GameTests, ConvertingSingleCharToPoints_ProperCases)
 {
     ASSERT_EQ(game.convertSingleCharToPoints('X'), 10);
