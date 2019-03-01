@@ -7,5 +7,9 @@ class Game
 public:
     Game();
     void addFrames(const std::string & frames);
+<<<<<< tomasz
     int convertSingleCharToPoints(char input);
+=======
+    void read(const std::string &);
+>>>>>> master
 };
