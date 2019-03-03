@@ -19,3 +19,8 @@ int Game::convertSingleCharToPoints(char input)
 
 void Game::read (const std::string &) {}
 
+void readFrames (std::string frames){
+    int placeOfPipe = frames.find('|');
+    frames.append(frames.begin() + placeOfPipe+1, frames.end());
+}
+
