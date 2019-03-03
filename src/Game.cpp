@@ -1,4 +1,4 @@
-#include "Game.hpp"
+#include "Game.hpp
 #include<stdexcept>
 
 Game::Game() {}
@@ -17,5 +17,18 @@ int Game::convertSingleCharToPoints(char input)
     throw std::logic_error("Invalid frame");
 }
 
-void Game::read (const std::string &) {}
+void Game::read (const std::string & frames) {
+
+	vector<int> characterLocations;
+	for(int i=0; i < frames.size(); i++)
+		if(frames[i] == '|')
+			characterLocations.push_back(frames[i]);
+	for(int i=0; i<characterLocations.length; i++){
+		string frame;
+		if i=0
+			frame.append(frames.begin()+charLocations[i-1], frames.begin()+characterLocations[i+1])
+		else
+			frame.append(frames.begin(), frames.begin()+characterLocations[i])
+		framesVector.pushback(frame);
+}
 
