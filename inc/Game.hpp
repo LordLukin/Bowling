@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include<vector>
 
 class Game
 {
@@ -9,8 +10,8 @@ public:
     void addFrames(const std::string & frames);
     int convertSingleCharToPoints(char input);
 
-    void vectorOfDigits(std::string const & digits);
-    int summingOfPointsWithoutBonus(int input);
+    void vectorOfDigits(const std::vector<int>& vec);
+    int summingOfPointsWithoutBonus(const std::vector<int>& vec);
 
 
 };

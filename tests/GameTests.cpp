@@ -1,7 +1,6 @@
 #include <gtest/gtest.h>
 #include "Game.hpp"
 #include <string>
-
 struct GameTests: public ::testing::Test
 {
     Game game;
@@ -12,7 +11,6 @@ TEST_F(GameTests, AddFrames)
     Game game;
     game.addFrames("Someone:32|4");
 }
-
 
 TEST_F(GameTests, convertFrameToPoints)
 {
@@ -26,8 +24,15 @@ TEST_F(GameTests, ConvertingWrongFrameCausesException)
     ASSERT_ANY_THROW(game.convertSingleCharToPoints('a'));
 }
 
-TEST_F(GameTests, SummingOfPointsWithoutBonus)
+TEST_F(GameTests, SummingOfPointsWithoutBonusWrongInput)
 {
     ASSERT_ANY_THROW(game.summingOfPointsWithoutBonus({}));
+}
+
+TEST_F(GameTests, SummingOfPointsWithoutBonus)
+{
+    ASSERT_EQ(game.summingOfPointsWithoutBonus({4,2}), 6);
+    ASSERT_EQ(game.summingOfPointsWithoutBonus({0,0}), 0);
+    ASSERT_EQ(game.summingOfPointsWithoutBonus({0,1,5}), 6);
 }
 
