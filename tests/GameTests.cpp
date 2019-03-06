@@ -26,3 +26,8 @@ TEST_F(GameTests, ConvertingWrongFrameCausesException)
     ASSERT_ANY_THROW(game.convertSingleCharToPoints('a'));
 }
 
+TEST_F(GameTests, SummingOfPointsWithoutBonus)
+{
+    ASSERT_ANY_THROW(game.summingOfPointsWithoutBonus({}));
+}
+
