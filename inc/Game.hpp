@@ -13,6 +13,7 @@ public:
     void vectorOfDigits(const std::vector<int>& vec);
     int summingOfPointsWithoutBonus(const std::vector<int>& vec);
     void vectorOfDigits2(const std::vector<int>& vec);
-    int summingOfBonusPoints(const std::vector<int>& vec);
+    int summingOfBonusPoints(const std::vector<int> &vec);
+    int summingOfBonusPointsOfSpare(const std::vector<int>& vec);
 
 };

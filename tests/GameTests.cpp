@@ -48,13 +48,12 @@ TEST_F(GameTests, SummingOfBonusPoints)
     ASSERT_EQ(game.summingOfBonusPoints({10,2,3,10,10}), 45);
     ASSERT_EQ(game.summingOfBonusPoints({10,2,3,10,10,10}), 65);
     ASSERT_EQ(game.summingOfBonusPoints({10,10,10,10,10,10}), 120);
-
-
-
 }
 
-
-
+TEST_F(GameTests, SummingOfBonusPointsOfSpare)
+{
+    ASSERT_EQ(game.summingOfBonusPointsOfSpare({3,7,10,2,8,10,3,7,2,8}), 22);
+}
 
 
 
