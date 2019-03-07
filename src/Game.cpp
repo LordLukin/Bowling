@@ -37,6 +37,8 @@ int Game::summingOfBonusPoints(const std::vector<int>& vec){
             int j = vec[i+1]+vec[i+2];
                 return j;
         }
+        else
+            return 0;
     }
 
  }
