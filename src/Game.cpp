@@ -4,6 +4,7 @@
 #include<algorithm>
 #include<numeric>
 #include<iostream>
+#include<iterator>
 Game::Game() {}
 
 void Game::addFrames(std::string const & frames) {}
@@ -23,11 +24,25 @@ void Game::vectorOfDigits(const std::vector<int>& vec) {}
 
 int Game::summingOfPointsWithoutBonus(const std::vector<int>& vec)
 {
-    if(vec.size()!=0)
-    {
+    if(vec.size()!=0){
         int sum = std::accumulate(vec.begin(), vec.end(), 0);
-               return sum;
+              return sum;
     }
         throw std::logic_error("some data are required");
-}
+ }
+
+int Game::summingOfBonusPoints(const std::vector<int>& vec){
+    for (int i=0; i<vec.size(); i++){
+        if (vec[i]==10){
+            int j = vec[i+1]+vec[i+2];
+                return j;
+        }
+    }
+
+ }
+
+
+
+
+
 

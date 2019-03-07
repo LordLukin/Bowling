@@ -34,5 +34,11 @@ TEST_F(GameTests, SummingOfPointsWithoutBonus)
     ASSERT_EQ(game.summingOfPointsWithoutBonus({4,2}), 6);
     ASSERT_EQ(game.summingOfPointsWithoutBonus({0,0}), 0);
     ASSERT_EQ(game.summingOfPointsWithoutBonus({0,1,5}), 6);
+    ASSERT_EQ(game.summingOfPointsWithoutBonus({0,0,0,0,4}), 4);
+}
+
+TEST_F(GameTests, SummingOfBonusPoints)
+{
+    ASSERT_EQ(game.summingOfBonusPoints({4,2,10,3,6}), 9);
 }
 
