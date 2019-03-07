@@ -39,9 +39,30 @@ TEST_F(GameTests, SummingOfPointsWithoutBonus)
 
 TEST_F(GameTests, SummingOfBonusPoints)
 {
-   // ASSERT_EQ(game.summingOfBonusPoints({4,2,3,6}), 0);
+    ASSERT_EQ(game.summingOfBonusPoints({4,2,3,6}), 0);
     ASSERT_EQ(game.summingOfBonusPoints({4,2,10,3,6}), 9);
     ASSERT_EQ(game.summingOfBonusPoints({10,1,1,10,2,2}), 6);
+    ASSERT_EQ(game.summingOfBonusPoints({10,10,2,3}), 17);
+    ASSERT_EQ(game.summingOfBonusPoints({2,3,10,10}), 40);
+    ASSERT_EQ(game.summingOfBonusPoints({3,4,10}), 20);
+    ASSERT_EQ(game.summingOfBonusPoints({10,2,3,10,10}), 45);
+    ASSERT_EQ(game.summingOfBonusPoints({10,2,3,10,10,10}), 65);
+    ASSERT_EQ(game.summingOfBonusPoints({10,10,10,10,10,10}), 120);
+
+
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 

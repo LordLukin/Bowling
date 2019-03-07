@@ -32,13 +32,26 @@ int Game::summingOfPointsWithoutBonus(const std::vector<int>& vec)
  }
 
 int Game::summingOfBonusPoints(const std::vector<int>& vec){
+    std::vector<int> vec2;
+
     int j=0;
-    for (int i=0; i<vec.size(); i++){
-          if (vec[i]==10){
-           j += vec[i+1]+vec[i+2];
-        }
+    for (int i=0; i<vec.size()-2; i++){
+        if ((vec[i]==10)){
+               j = vec[i+1]+vec[i+2];
+                vec2.push_back(j);
+         }
      }
-     return j;
+
+     if ((vec[vec.size()-2]==10) && (vec[vec.size()-1]==10))
+          vec2.push_back(40);
+     if ((vec[vec.size()-2]!=10) && (vec[vec.size()-1]==10))
+           vec2.push_back(20);
+
+
+    int sum2 = std::accumulate(vec2.begin(), vec2.end(), 0);
+
+    return sum2;
+
 }
 
 
