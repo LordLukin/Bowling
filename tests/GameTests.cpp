@@ -1,4 +1,4 @@
-#include <gtest/gtest.h>
+﻿#include <gtest/gtest.h>
 #include "Game.hpp"
 #include <string>
 struct GameTests: public ::testing::Test
@@ -52,7 +52,19 @@ TEST_F(GameTests, SummingOfBonusPoints)
 
 TEST_F(GameTests, SummingOfBonusPointsOfSpare)
 {
-    ASSERT_EQ(game.summingOfBonusPointsOfSpare({3,7,10,2,8,10,3,7,2,8}), 22);
+    ASSERT_EQ(game.summingOfBonusPointsOfSpare({3,7,10,2,8,10,3,7,2,8}), 24);
+    ASSERT_EQ(game.summingOfBonusPointsOfSpare({4,6,10,2,3,2,8}), 12);
+    ASSERT_EQ(game.summingOfBonusPointsOfSpare({2,8,3,7,3,3}), 6);
+    ASSERT_EQ(game.summingOfBonusPointsOfSpare({2,8,3,7}),6 );
+    ASSERT_EQ(game.summingOfBonusPointsOfSpare({2,8,3,7,1,9,1,9}),6 );
+    ASSERT_EQ(game.summingOfBonusPointsOfSpare({2,8,3,1,1,8,10}),3 );
+    ASSERT_EQ(game.summingOfBonusPointsOfSpare({10,10,10,10}),0 );
+    ASSERT_EQ(game.summingOfBonusPointsOfSpare({1,1,2,2,10}),0 );
+    ASSERT_EQ(game.summingOfBonusPointsOfSpare({1,9,2,2,10}),2 );
+    ASSERT_EQ(game.summingOfBonusPointsOfSpare({10,9,1,1,1}),1 );
+    ASSERT_EQ(game.summingOfBonusPointsOfSpare({10,10,9,1,1,1}),1 );
+    ASSERT_EQ(game.summingOfBonusPointsOfSpare({10,10,9,1,10,1,1}),10 );
+    ASSERT_EQ(game.summingOfBonusPointsOfSpare({10,10,9,1,10,1,1,10,10,10}),10 );
 }
 
 
