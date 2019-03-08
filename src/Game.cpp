@@ -62,8 +62,6 @@ int Game::summingOfBonusPointsOfSpare(const std::vector<int>& vec){
              }
              i+=2;
         }
-        else
-         continue;
 
     }
      if(vec[vec.size()-1]+vec[vec.size()-2]==10)
@@ -72,7 +70,6 @@ int Game::summingOfBonusPointsOfSpare(const std::vector<int>& vec){
             vec2.push_back(0);
      int suma2 = std::accumulate(vec2.begin(), vec2.end(), 0);
      return suma2;
-
 }
 
 

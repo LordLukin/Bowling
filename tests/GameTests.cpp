@@ -65,7 +65,10 @@ TEST_F(GameTests, SummingOfBonusPointsOfSpare)
     ASSERT_EQ(game.summingOfBonusPointsOfSpare({10,10,9,1,1,1}),1 );
     ASSERT_EQ(game.summingOfBonusPointsOfSpare({10,10,9,1,10,1,1}),10 );
     ASSERT_EQ(game.summingOfBonusPointsOfSpare({10,10,9,1,10,1,1,10,10,10}),10 );
+    ASSERT_EQ(game.summingOfBonusPointsOfSpare({10,10,9,1,10,1,1,10,10,10}),10 );
+    ASSERT_EQ(game.summingOfBonusPointsOfSpare({0,0,0,0}),0 );
 }
+
 
 
 
