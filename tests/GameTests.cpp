@@ -1,4 +1,4 @@
-﻿#include <gtest/gtest.h>
+#include <gtest/gtest.h>
 #include "Game.hpp"
 #include <string>
 struct GameTests: public ::testing::Test
@@ -68,17 +68,6 @@ TEST_F(GameTests, SummingOfBonusPointsOfSpare)
     ASSERT_EQ(game.summingOfBonusPointsOfSpare({10,10,9,1,10,1,1,10,10,10}),10 );
     ASSERT_EQ(game.summingOfBonusPointsOfSpare({0,0,0,0}),0 );
 }
-
-
-
-
-
-
-
-
-
-
-
 
 TEST_F(GameTests, conversion_to_int)
 {
