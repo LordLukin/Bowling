@@ -7,7 +7,7 @@
 #include<iterator>
 Game::Game() {}
 
-void Game::addFrames(std::string const & frames) {
+void Game::addFrames(std::string const & frames) {}
 int Game::convertSingleCharToPoints(char input)
 {
     if (input == '-')
@@ -41,7 +41,6 @@ int Game::summingOfBonusPoints(const std::vector<int>& vec){
                 vec2.push_back(j);
          }
      }
-
      if ((vec[vec.size()-2]==10) && (vec[vec.size()-1]==10))
           vec2.push_back(40);
      if ((vec[vec.size()-2]!=10) && (vec[vec.size()-1]==10))
@@ -62,7 +61,6 @@ int Game::summingOfBonusPointsOfSpare(const std::vector<int>& vec){
              }
              i+=2;
         }
-
     }
      if(vec[vec.size()-1]+vec[vec.size()-2]==10)
           vec2.push_back(vec[vec.size()-2]);
@@ -71,9 +69,3 @@ int Game::summingOfBonusPointsOfSpare(const std::vector<int>& vec){
      int suma2 = std::accumulate(vec2.begin(), vec2.end(), 0);
      return suma2;
 }
-
-
-
-
-
-
