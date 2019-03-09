@@ -1,4 +1,4 @@
-﻿#include <gtest/gtest.h>
+#include <gtest/gtest.h>
 #include "Game.hpp"
 #include <string>
 struct GameTests: public ::testing::Test
@@ -12,14 +12,13 @@ TEST_F(GameTests, AddFrames)
     game.addFrames("Someone:32|4");
 }
 
-<<<<<<< HEAD
 TEST_F(GameTests, conversion_to_int)
 {
     Game game;
     auto result = game.conversion_to_int("32|4");
     ASSERT_EQ(result, 0);
 }
-=======
+
 TEST_F(GameTests, convertFrameToPoints)
 {
     ASSERT_EQ(game.convertSingleCharToPoints('X'), 10);
@@ -76,16 +75,3 @@ TEST_F(GameTests, SummingOfBonusPointsOfSpare)
     ASSERT_EQ(game.summingOfBonusPointsOfSpare({10,10,9,1,10,1,1,10,10,10}),10 );
     ASSERT_EQ(game.summingOfBonusPointsOfSpare({0,0,0,0}),0 );
 }
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 6c174b324e9caea54ba8897c3aa13f2e8d183438
