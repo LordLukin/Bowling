@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include "Game.hpp"
 #include<vector>
 #include<iostream>
@@ -21,8 +20,8 @@ int Game::conversion_to_int(std::string input)
     else
         return 1;
 }
-=======
-﻿#include "Game.hpp"
+
+#include "Game.hpp"
 #include<stdexcept>
 #include<vector>
 #include<algorithm>
@@ -100,5 +99,5 @@ int Game::summingOfBonusPointsOfSpare(const std::vector<int>& vec){
 
 
 
->>>>>>> 6c174b324e9caea54ba8897c3aa13f2e8d183438
+
 
