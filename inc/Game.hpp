@@ -1,6 +1,5 @@
 #pragma once
 #include <string>
-#include <iostream>
 
 class Game
 {
@@ -9,6 +8,6 @@ public:
     Game();
     std::string getName();
     void addFrames(const std::string & frames);
-    void read(const std::string& playerAndGame) throw(std::logic_error);
+    void read(const std::string& playerAndGame);
     int convertSingleCharToPoints(char input);
 };

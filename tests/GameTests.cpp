@@ -18,7 +18,8 @@ TEST_F(GameTests, TestNameExtraction)
     game.read("Michael:9-|9-|9-|9-|9-|9-|9-|9-|9-|9-||");
     ASSERT_EQ(game.getName(),"Michael");
     Game game2;
-    ASSERT_THROW(game2.read(":9-|9-|9-|9-|9-|9-|9-|9-|9-|9-||"), std::logic_error);
+    game2.read(":9-|9-|9-|9-|9-|9-|9-|9-|9-|9-||");
+    ASSERT_EQ(game2.getName(),"");
 }
 
 TEST_F(GameTests, ConvertingSingleCharToPoints_ProperCases)

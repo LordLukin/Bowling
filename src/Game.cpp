@@ -5,12 +5,8 @@ Game::Game() {}
 
 void Game::addFrames(std::string const & frames) {}
 
-void Game::read(const std::string & playerAndGame) throw(std::logic_error) {
+void Game::read(const std::string & playerAndGame) {
     int placeOfColon = playerAndGame.find(':');
-    if(placeOfColon == 0)
-    {
-        throw std::logic_error("Invalid name");
-    }
     name.append(playerAndGame.begin(), playerAndGame.begin() + placeOfColon);
 }
 
