@@ -8,6 +8,7 @@
 
 Game::Game() {}
 
+void Game::addFrames(std::string const & frames) {}
 int Game::convertSingleCharToPoints(char input)
 {
     if (input == '-')
@@ -19,6 +20,7 @@ int Game::convertSingleCharToPoints(char input)
 
     throw std::logic_error("Invalid frame");
 }
+
 
 int Game::summingOfPointsWithoutBonus(const std::vector<int>& vec)
 {

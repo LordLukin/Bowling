@@ -6,6 +6,11 @@ struct GameTests: public ::testing::Test
 {
     Game game;
 };
+TEST_F(GameTests, AddFrames)
+{
+    Game game;
+    game.addFrames("Someone:32|4");
+}
 
 TEST_F(GameTests, convertFrameToPoints)
 {
