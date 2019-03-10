@@ -8,6 +8,7 @@ class Game
 public:
     Game();
     void addFrames(const std::string & frames);
+    void read(const std::string &);
     int convertSingleCharToPoints(char input);
     int summingOfPointsWithoutBonus(const std::vector<int>& vec);
     int summingOfBonusPoints(const std::vector<int>& vec);

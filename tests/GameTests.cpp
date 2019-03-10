@@ -12,6 +12,12 @@ TEST_F(GameTests, AddFrames)
     game.addFrames("Someone:32|4");
 }
 
+TEST_F(GameTests, Read)
+{
+    Game game;
+    game.read("text");
+}
+
 TEST_F(GameTests, convertFrameToPoints)
 {
     ASSERT_EQ(game.convertSingleCharToPoints('X'), 10);
