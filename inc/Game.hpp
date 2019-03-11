@@ -1,15 +1,16 @@
 #pragma once
 #include <string>
+#include <vector>
 
 class Game
 {
     // TODO: Add game status: No game, In progress, Finished
 public:
     Game();
-    void addFrames(const std::string & frames);
-
+    void addFrames(const std::string& frames);
+    void read(const std::string& );
     int convertSingleCharToPoints(char input);
-
-    void read(const std::string &);
-
+    int summingOfPointsWithoutBonus(const std::vector<int>& vec);
+    int summingOfBonusPoints(const std::vector<int>& vec);
+    int summingOfBonusPointsOfSpare(const std::vector<int>& vec);
 };
