@@ -8,8 +8,22 @@
 
 Game::Game() {}
 
-void Game::addFrames(const std::string& frames){}
-void Game::read(const std::string& ){}
+void Game::read (const std::string & frames) {
+
+	std::vector<int> characterLocations;
+	std::vector<std::string> framesVector;
+        for(int i=0; i < frames.size(); i++)
+                if(frames[i] == '|')
+                        characterLocations.push_back(i);
+        for(int i=0; i<characterLocations.size(); i++){
+		std::string frame;
+                if (i==0)
+                        frame.append(frames.begin()+characterLocations[i], frames.begin()+characterLocations[i+1]);
+                else
+                        frame.append(frames.begin(), frames.begin()+characterLocations[i]);
+                framesVector.push_back(frame);
+}
+}
 
 int Game::convertSingleCharToPoints(char input)
 {
