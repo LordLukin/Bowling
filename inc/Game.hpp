@@ -5,10 +5,10 @@ class Game
 {
     // TODO: Add game status: No game, In progress, Finished
 
-    std:: string frames;
     
 public:
     Game();
+    std:: string frames;
     void addFrames(const std::string & frames);
 
     int convertSingleCharToPoints(char input);

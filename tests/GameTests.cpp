@@ -13,11 +13,10 @@ TEST_F(GameTests, AddFrames)
     game.addFrames("Someone:32|4");
 }
 
-TEST_F(GameTests, Read)
+TEST_F(GameTests, ReadFrames)
  {
      Game game;
-     game.read("Someone:32|4");
-     ASSERT_EQ(game.frames,"32|4");
+     game.read("32|4");
  }
 
 
