@@ -13,6 +13,14 @@ TEST_F(GameTests, AddFrames)
     game.addFrames("Someone:32|4");
 }
 
+TEST_F(GameTests, Read)
+ {
+     Game game;
+     game.read("Someone:32|4");
+     ASSERT_EQ(game.frames,"32|4");
+ }
+
+
 TEST_F(GameTests, ConvertingSingleCharToPoints_ProperCases)
 {
     ASSERT_EQ(game.convertSingleCharToPoints('X'), 10);

@@ -17,10 +17,8 @@ int Game::convertSingleCharToPoints(char input)
     throw std::logic_error("Invalid frame");
 }
 
-void Game::read (const std::string &) {}
-
-void readFrames (std::string frames){
-    int placeOfPipe = frames.find('|');
-    frames.append(frames.begin() + placeOfPipe+1, frames.end());
+void Game::read (const std::string &) {
+    int placeOfColon = frames.find(':');
+    frames.append(frames.begin() + placeOfColon+1, frames.end());
 }
 

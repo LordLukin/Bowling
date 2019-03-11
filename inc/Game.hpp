@@ -14,6 +14,4 @@ public:
     int convertSingleCharToPoints(char input);
 
     void read(const std::string &);
-    
-    void readFrames (std::string frames);
 };
