@@ -17,7 +17,7 @@ void Game::read (const std::string & frames) {
                         characterLocations.push_back(i);
         for(int i=0; i<characterLocations.size(); i++){
 		std::string frame;
-                if (i=0)
+                if (i==0)
                         frame.append(frames.begin()+characterLocations[i], frames.begin()+characterLocations[i+1]);
                 else
                         frame.append(frames.begin(), frames.begin()+characterLocations[i]);
