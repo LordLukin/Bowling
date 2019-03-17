@@ -9,7 +9,15 @@
 Game::Game() {}
 
 void Game::addFrames(const std::string& frames){}
-void Game::read(const std::string& ){}
+
+void Game::read(const std::string & playerAndGame) {
+    int placeOfColon = playerAndGame.find(':');
+    name.append(playerAndGame.begin(), playerAndGame.begin() + placeOfColon);
+}
+
+std::string Game::getName() {
+    return name;
+}
 
 int Game::convertSingleCharToPoints(char input)
 {
@@ -22,7 +30,6 @@ int Game::convertSingleCharToPoints(char input)
 
     throw std::logic_error("Invalid frame");
 }
-
 
 int Game::summingOfPointsWithoutBonus(const std::vector<int>& vec)
 {
@@ -77,3 +84,4 @@ int Game::summingOfBonusPointsOfSpare(const std::vector<int>& vec)
 
     return std::accumulate(vec2.begin(), vec2.end(), 0);
 }
+

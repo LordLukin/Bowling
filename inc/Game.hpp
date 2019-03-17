@@ -4,11 +4,12 @@
 
 class Game
 {
-    // TODO: Add game status: No game, In progress, Finished
+    std::string name;
 public:
     Game();
-    void addFrames(const std::string& frames);
-    void read(const std::string& );
+    std::string getName();
+    void addFrames(const std::string & frames);
+    void read(const std::string& playerAndGame);
     int convertSingleCharToPoints(char input);
     int summingOfPointsWithoutBonus(const std::vector<int>& vec);
     int summingOfBonusPoints(const std::vector<int>& vec);
