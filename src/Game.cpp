@@ -18,4 +18,3 @@ int Game::convertSingleCharToPoints(char input)
 }
 
 void Game::read (const std::string &) {}
-

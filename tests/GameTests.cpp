@@ -23,6 +23,7 @@ TEST_F(GameTests, ConvertingSingleCharToPoints_BadCases)
 {
     ASSERT_ANY_THROW(game.convertSingleCharToPoints('a'));
 }
+
 TEST_F(GameTests, Read)
 {
     Game game;

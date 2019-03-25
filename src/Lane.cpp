@@ -6,3 +6,10 @@ int Lane::getNumberOfGames()
 {
     return 0;
 }
+
+
+std::ifstream Lane::open(std::string pathToFile)
+{
+    std::ifstream laneFile;
+    return laneFile;
+}
