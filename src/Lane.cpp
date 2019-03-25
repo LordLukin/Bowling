@@ -11,5 +11,6 @@ int Lane::getNumberOfGames()
 std::ifstream Lane::open(std::string pathToFile)
 {
     std::ifstream laneFile;
+    laneFile.open(pathToFile);
     return laneFile;
 }

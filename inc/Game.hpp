@@ -10,7 +10,6 @@ public:
     void addFrames(const std::string& frames);
     void read(const std::string& frames);
     int convertSingleCharToPoints(char input);
-    void read(const std::string &);
     int summingOfPointsWithoutBonus(const std::vector<int>& vec);
     int summingOfBonusPoints(const std::vector<int>& vec);
     int summingOfBonusPointsOfSpare(const std::vector<int>& vec);
