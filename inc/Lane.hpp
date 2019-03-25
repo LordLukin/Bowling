@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "Game.hpp"
+#include <fstream>
 
 class Lane
 {
@@ -9,4 +10,5 @@ class Lane
 public:
     Lane();
     int getNumberOfGames();
+    std::ifstream open(std::string pathToFile);
 };
